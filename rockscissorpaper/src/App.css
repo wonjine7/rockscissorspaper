@@ -1,15 +1,28 @@
 .box{
   border: 1px solid black;
-  width: 500px;
+  width: 700px;
   text-align: center;
 }
 
 
 .item-img{
   width: 400px;
+  height: 400px;
 }
 
 .main{
   display: flex;
   justify-content: center;
 }
+
+.Win { 
+   border: 10px solid green;  color: green;
+   }
+
+.Lose { 
+   border: 10px solid red;  color: red;
+   }
+
+.Tie { 
+   border: 10px solid black;  color: black;
+   }

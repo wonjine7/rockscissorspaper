@@ -30,6 +30,7 @@ function App() {
   const [computerSelect, setComputerSelect] = useState(null);
   const [result, setResult] = useState("");
   const [computerResult, setComputerResult] = useState("");
+
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
     let computerChoice = randomChoice();
@@ -43,7 +44,7 @@ function App() {
     //user == rock, computer == "scissor" user win
 
     if (user.name === computer.name) {
-      return "tie";
+      return "Tie";
     } else if (user.name === "Rock")
       return computer.name === "Scissors" ? "Win" : "Lose";
     else if (user.name === "Scissors")
@@ -54,7 +55,7 @@ function App() {
 
   const judgement2 = (user, computer) => {
     if (user.name === computer.name) {
-      return "tie";
+      return "Tie";
     } else if (computer.name === "Rock")
       return user.name === "Scissors" ? "Win" : "Lose";
     else if (computer.name === "Scissors")
