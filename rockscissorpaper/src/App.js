@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 import Box from "./component/Box";
 
@@ -26,15 +26,17 @@ const choice = {
 };
 
 function App() {
+  const [userSelect, setUserSelect] = useState(null);
+
   const play = (userChoice) => {
-    console.log("선택됨!", userChoice);
+    setUserSelect(choice[userChoice]);
   };
 
   return (
     <div>
       <div className="main">
-        <Box title="You" />
-        <Box title="Computer" />
+        <Box title="You" item={userSelect} />
+        {/* <Box title="Computer" /> */}
       </div>
       <div className="main">
         <button onClick={() => play("scissors")}>가위</button>
